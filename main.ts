@@ -1,3 +1,5 @@
+let ps = [0];
+
 let Exploded = 0
 
 let LedtoPlotx = -1
@@ -5,18 +7,33 @@ let LedtoPloty = 0
 
 let HasTime = 1
 
-input.onButtonPressed(Button.A, function () {
-})
+GenPasword()
 
 basic.forever(function () {
-    TimeAnim()
+
 })
 
+function GenPasword() {
+    for (let i = 0; i < 4; i++) {
+        ps[i] = randint(0, 1)
+    }
+    DisPlayPassword()
+}
+
+function DisPlayPassword() {
+    for (let i = 0; i < 4; i++) {
+        basic.showNumber(ps[i])
+        basic.clearScreen()
+        basic.pause(100)
+    }
+    TimeAnim()
+}
 
 function TimeAnim() {
     music.setVolume(5)
     while (HasTime) {
-        if (LedtoPloty == 5 && LedtoPlotx == -1 ) {
+        if (LedtoPloty == 5 && LedtoPlotx == 3) {
+            led.plot(4,4)
             HasTime = 0
             Explode()
         } else {
