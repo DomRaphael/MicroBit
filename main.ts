@@ -14,9 +14,9 @@ basic.forever(function () {
 
 
 function TimeAnim() {
-    music.setVolume(250)
+    music.setVolume(5)
     while (HasTime) {
-        if (LedtoPloty == 5) {
+        if (LedtoPloty == 5 && LedtoPlotx == -1 ) {
             HasTime = 0
             Explode()
         } else {
@@ -27,7 +27,7 @@ function TimeAnim() {
             LedtoPlotx += 1
             led.plot(LedtoPlotx, LedtoPloty)
             music.playTone(988, music.beat(BeatFraction.Whole))
-            basic.pause(100)
+            basic.pause(400)
         }
     }
 }
