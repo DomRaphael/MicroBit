@@ -1,3 +1,4 @@
+https://img.shields.io/badge/bundlephobia/:format/:packageName/:version
 
 > Abrir essa página em [https://domraphael.github.io/microbit/](https://domraphael.github.io/microbit/)
 
